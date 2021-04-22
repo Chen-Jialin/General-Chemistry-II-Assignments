@@ -1,0 +1,249 @@
+% !TEX program = pdflatex
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 10}
+\begin{document}
+\begin{problem}{18.6}
+In the presence of vanadium oxide, \ce{SO2}(g) reacts with an excess of oxygen to give \ce{SO3}(g):
+\begin{center}
+\ce{SO2(g) + \frac{1}{2}O2(g) ->[V2O5] SO3(g)}
+\end{center}
+This reaction is an important step in the manufacture of sulfuric acid. It is observed that tripling the \ce{SO2} concentration increases the rate by a factor of $3$, but tripling the \ce{SO3} concentration decreases the rate by a factor of $1.7\approx\sqrt{3}$. The rate is insensitive to the \ce{O2} concentration as long as an
+excess of oxygen is present.\\
+(a) Write the rate expression for this reaction, and give the units of the rate constant $k$.\\
+(b) If [\ce{SO2}] is multiplied by $2$ and [\ce{SO3}] by $4$ but all other conditions are unchanged, what change in the rate will be observed?
+\end{problem}
+\begin{sol}
+\\(a) The rate expression for this reaction is
+\[
+\text{rate}=\uline{k[SO_2][SO_3]^{-\frac{1}{2}}}
+\]
+The units of the rate constant $k$ are \uline{mol L$^{-\frac{1}{2}}$ s$^{-1}$}.
+\\(b) The rate will \uline{not} change.
+\end{sol}
+
+\begin{problem}{18.8}
+The rate for the oxidation of iron(II) by cerium(IV)
+\begin{center}
+\ce{Ce^{4+}(aq) + Fe^{2+}(aq) -> Ce^{3+}(aq) + Fe^{3+}(aq)}
+\end{center}
+is measured at several different initial concentrations of the two reactants:
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+[\ce{Ce^4+}](mol L$^{-1}$) & [\ce{Fe^{2+}}](mol L$^{-1}$) & Rate(mol L$^{-1}$ s$^{-1}$) \\ \hline
+$1.1\times10^{-5}$                                                   & $1.8\times10^{-5}$                                                   & $2.0\times10^{-7}$          \\
+$1.1\times10^{-5}$                                                   & $2.8\times10^{-5}$                                                   & $3.1\times10^{-7}$          \\
+$3.4\times10^{-5}$                                                   & $2.8\times10^{-5}$                                                   & $9.5\times10^{-7}$          \\ \hline
+\end{tabular}
+\end{table}
+\\(a) Write the rate expression for this reaction.\\
+(b) Calculate the rate constant $k$ and give its units.\\
+(c) Predict the initial reaction rate for a solution in which [\ce{Ce^{4+}}] is $2.6\times10^{-5}$ \textsc{m} and [\ce{Fe^{2+}}] is $1.3\times10^{-5}$ \textsc{m}.
+\end{problem}
+\begin{sol}
+\\(a) Suppose the rate expression for this reaction is
+\[
+\text{rate}=k[Ce^{4+}]^{n_1}[Fe^{2+}]^{n_2}
+\]
+\begin{gather*}
+\frac{\text{rate}_2}{\text{rate}_1}=(\frac{[Fe^{2+}]_2}{[Fe^{2+}]_1})^{n_2}\Longrightarrow\frac{3.1\times10^{-7}}{2.0\times10^{-7}}=\frac{2.8\times10^{-5}}{1.8\times10^{-5}}\\
+\Longrightarrow n_2=1\\
+\frac{\text{rate}_3}{\text{rate}_2}=(\frac{[Ce^{4+}]_3}{[Ce^{4+}]_2})^{n_1}\Longrightarrow\frac{9.5\times10^{-7}}{3.1\times10^{-7}}=(\frac{3.4\times10^{-5}}{1.1\times10^{-5}})\\
+\Longrightarrow n_1=1
+\end{gather*}
+Therefore, the rate expression for this reaction is
+\[
+\uline{\text{rate}=k[Ce^{4+}][Fe^{2+}]}
+\]
+(b)
+\begin{gather*}
+\text{rate}_1=k[Ce^{4+}]_1[Fe^{2+}]_1\Longrightarrow2.0\times10^{-7}=k\times1.1\times10^{-5}mol~L^{-1}\times1.8\times10^{-5}mol~L^{-1}\\
+\Longrightarrow k=1.0\times10^3mol^{-1}~L~s^{-1}
+\end{gather*}
+Therefore, the rate constant $k$ is \uline{$1.0\times10^3$}, and its units are \uline{mol$^{-1}$ L s$^{-1}$}.\\
+(c) The initial rate is
+\[
+\text{rate}=k[Ce^{4+}][Fe^{2+}]=1.0\times10^3\times2.6\times10^{-5}\times1.3\times10^{-5}mol~L^{-1}~s^{-1}=\uline{3.4\times10^{-7}mol L^{-1} s^{-1}}
+\]
+\end{sol}
+
+\begin{problem}{18.17}
+The rate for the reaction
+\begin{center}
+\ce{OH-(aq) + NH4^+(aq) -> H2O(l) + NH3(aq)}
+\end{center}
+is first order in both \ce{OH-} and \ce{NH4^+} concentrations, and the rate constant $k$ at $20^{\circ}$C is $3.4\times10^{10}$ L mol$^{-1}$ s$^{-1}$. Suppose $1.00$ L of a $0.0010$ \textsc{m} \ce{NaOH} solution is rapidly mixed with the same volume of $0.0010$ \textsc{m} \ce{NH4Cl} solution. Calculate the time (in seconds) required for the \ce{OH-} concentration to decrease to a value of $1.0\times{-5}$ \textsc{m}.
+\end{problem}
+\begin{sol}
+The initial volume of \ce{OH-} and \ce{NH4^+} is
+\[
+[OH^-]_0=[NH_4^+]_0=\frac{0.0010mol~L^{-1}\times1.00L}{1.00L+1.00L}=0.00050mol~L^{-1}
+\]
+The rate for reaction can be written as
+\begin{gather*}
+\text{rate}=-\frac{d[OH^-]}{dt}=k[OH^-][NH_4^+]=k[OH^-]^2\\
+\Longrightarrow\frac{1}{[OH^-]}-\frac{1}{[OH^-]_0}=kt
+\Longrightarrow t=\frac{\frac{1}{[OH^-]}-\frac{1}{[OH^-]_0}}{k}=\frac{\frac{1}{1.0\times10^{-5}}-\frac{1}{0.00050}}{3.4\times10^{10}}s=\uline{2.9\times10^{-6}s}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{18.25}
+Write the overall reaction and rate laws that correspond to the following reaction mechanisms. Be sure to eliminate intermediates from the answers.\\
+(a) \ce{A + B <=>[k_1][k_{-1}] C + D}\hfill(fast equilibrium)\\
+\indent\ce{C + E ->[k_2] F}\hfill(slow)\\
+(b) \ce{A <=>[k_1][k_{-1}] B +C}\hfill(fast equilibrium)\\
+\indent\ce{C + D <=>[k_2][k_{-2}] E}\hfill(fast equilibrium)\\
+\indent\ce{E ->[k_3] F}\hfill(slow)
+\end{problem}
+\begin{sol}
+\\(a) The overall reaction is
+\begin{center}
+\ce{A + B + E -> D + F}
+\end{center}
+The equilibrium constant of the first reaction is
+\begin{gather*}
+\frac{[C][D]}{[A][B]}=K=\frac{k_1}{k_{-1}}\\
+\Longrightarrow[C]=\frac{k_1[A][B]}{k_{-1}[D]}
+\end{gather*}
+The rate law is
+\[
+\text{rate}=k_2[C][E]=\frac{k_1k_2[A][B][E]}{k_{-1}[D]}
+\]
+(b) The overall reaction is
+\begin{center}
+\ce{A + D -> B + F}
+\end{center}
+The equilibrium constant of the first and the second reaction is
+\begin{gather*}
+\frac{[B][C]}{[A]}=K_1=\frac{k_1}{k_{-1}}\Longrightarrow[C]=\frac{k_1[A]}{k_{-1}[B]}\\
+\frac{[E]}{[C][D]}=K_2=\frac{k_2}{k_{-2}}\Longrightarrow[E]=\frac{k_2}{k_{-2}}[C][D]=\frac{k_1k_2[A][D]}{k_{-1}k_{-2}[B]}
+\end{gather*}
+The rate law is
+\[
+\text{rate}=k_3[E]=\frac{k_1k_2k_3[A][D]}{k_{-1}k_{-2}[B]}
+\]
+\end{sol}
+
+\begin{problem}{18.33}
+The mechanism for the decomposition of \ce{NO2Cl} is
+\begin{center}
+\ce{NO2Cl <=>[k_1][k_{-1}] NO2 + Cl}\\
+\ce{NO2Cl + Cl ->[k_2] NO2 + Cl2}
+\end{center}
+By making a steady­state approximation for [\ce{Cl}], express the rate of appearance of \ce{Cl2} in terms of the concentrations of \ce{NO2Cl} and \ce{NO2}.
+\end{problem}
+\begin{sol}
+The net rate of change of [\ce{Cl}] is
+\begin{gather*}
+\frac{d[Cl]}{dt}=k_1[NO_2Cl]-k_{-1}[NO_2][Cl]-k_3[NO_2Cl][Cl]=0\\
+\Longrightarrow[Cl]=\frac{k_1[NO_2Cl]}{k_{-1}[NO_2]+k_2[NO_2Cl]}
+\end{gather*}
+The rate of the overall reaction \ce{2NO2Cl -> 2NO2 + Cl2} is
+\[
+\text{rate}=\frac{1}{2}\frac{d[Cl_2]}{dt}=k_2[NO_2Cl][Cl]=\frac{k_1k_2[NO_2Cl]^2}{k_{-1}[NO_2]+k_2[NO_2Cl]}
+\]
+\end{sol}
+
+\begin{problem}{18.38}
+Dinitrogen tetraoxide (\ce{N2O4}) decomposes spontaneously at
+room temperature in the gas phase:
+\begin{center}
+\ce{N2O4(g) -> 2NO2(g)}
+\end{center}
+The rate law governing the disappearance of \ce{N2O4} with time is
+\[
+-\frac{d[N_2O_4]}{dt}=k[N_2O_4]
+\]
+At $30^{\circ}$C, $k=5.1\times10^6s^{-1}$ and the activation energy for the reaction is $54.0 kJ~mol^{-1}$.\\
+(a) Calculate the time (in seconds) required for the partial pressure of \ce{N2O4(g)} to decrease from $0.10$ atm to $0.010$ atm at $30^{\circ}$C.
+(b) Repeat the calculation of part (a) at $300^{\circ}$C.
+\end{problem}
+\begin{sol}
+Integrate the reaction rate equation to get
+\begin{gather*}
+\ln[N_2O_4]-\ln[N_2O_4]_0=-kt\Longrightarrow\ln0.010-\ln0.10=-5.1\times10^6s^{-1}t\\
+\Longrightarrow t=\uline{4.5\times10^7s}
+\end{gather*}
+(b) The rate constant at $300^{\circ}$ is
+\begin{align*}
+k'=&\frac{k}{e^{-\frac{E_a}{RT}}}e^{-\frac{E_a}{RT'}}\\
+=&\frac{5.1\times10^6s^{-1}}{e^{-\frac{54.0\times10^3J~mol^{-1}}{8.31J~mol^{-1}~K^{-1}\times(30+273.15)K}}}e^{-\frac{54.0\times10^3J~mol^{-1}}{8.31J~mol^{-1}~K^{-1}\times(300+273.15)K}}\\
+=&1.2\times10^{11}s^{-1}
+\end{align*}
+Therefore,
+\begin{gather*}
+\ln[N_2O_4]-\ln[N_2O_4]_0=-k't\Longrightarrow\ln0.010-\ln0.10=-1.2\times10^{11}s^{-1}t\\
+\Longrightarrow t=\uline{1.9\times10^{-11}s}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{18.47}
+Certain bacteria use the enzyme penicillinase to decompose penicillin and render it inactive. The Michaelis–Menten constants for this enzyme and substrate are $K_m=5\times10^{-5}$ mol L$^{-1}$ and $k_2=2\times10^3s^{-1}$.\\
+(a) What is the maximum rate of decomposition of penicillin if the enzyme concentration is $6\times10^{-7}$ \textsc{m}?\\
+(b) At what substrate concentration will the rate of decomposition be half that calculated in part (a)?
+\end{problem}
+\begin{sol}
+\\(a) The maximum rate of decomposition of penicillin is
+\[
+V_m=k_2[E_T]=2\times10^3s^{-1}\times6\times10^{-7}mol~L^{-1}=\uline{1.8\times10^{-3}mol~L^{-1}~s^{-1}}
+\]
+(b) When the rate of decomposition is half that calculated in part (a)
+\begin{gather*}
+\frac{V_{\max}[S]}{K_m+[S]}=\frac{1}{2}V_{\max}\Longrightarrow\frac{[S]}{5\times10^{-5}mol~L^{-1}+[S]}=\frac{1}{2}\\
+\Longrightarrow[S]=\uline{5\times10^{-5}mol~L^{-1}}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{18.50}
+Suppose $1.00$ L of $9.95\times10^{-3}$ \textsc{m} \ce{S2O3^{2-}} is mixed with $1.00$ L of $2.52\times10^{-3}$ \textsc{m} \ce{H2O2} at a pH of $7.0$ and a temperature of $25^{\circ}$C. These species react by two competing pathways, represented by the balanced equations.
+\begin{center}
+\ce{S2O3^{2-} + 4H2O2 -> 2SO4^{2-} + H2O + 2H3O+}\\
+\ce{2S2O3^{2-} + H2O2 + 2H3O+ -> S4O6^{2-} + 4H2O}
+\end{center}
+At the instant of mixing, the thiosulfate ion (\ce{S2O3^{2-}}) is observed to be disappearing at the rate of $7.9\times10^{-7}$ mol L$^{-1}$ s$^{-1}$. At the same moment, the \ce{H2O2} is disappearing at the rate of $8.8\times10^{-7}$ mol L$^{-1}$ s$^{-1}$.\\
+(a) Compute the percentage of the \ce{S2O3^{2-}} that is, at that moment, reacting according to the first equation.\\
+(b) It is observed that the hydronium ion concentration drops. Use the data and answer from part (a) to compute how many milliliters per minute of $0.100$ \textsc{m} \ce{H3O+} must be added to keep the pH equal to $7.0$.
+\end{problem}
+\begin{sol}
+\\(a) Suppose the percentage of the \ce{S2O3^{2-}} that is reacting according to the first equation is $\alpha$
+\begin{gather*}
+4~\text{rate}_1+\text{rate}_2=-\frac{d[H_2O_2]}{dt}\\
+\Longrightarrow4\times7.9\times10^{-7}mol~L^{-1}\alpha+\frac{1}{2}\times7.9\times10^{-7}mol~L^{-1}(1-\alpha)=8.8\times10^{-7}mol~L^{-1}\\
+\Longrightarrow\alpha=\uline{18\%}
+\end{gather*}
+(b) The rate of the two reaction are
+\begin{gather*}
+\text{rate}_1=7.9\times10^{-7}mol~L^{-1}~s^{-1}\alpha=1.4\times10^{-7}mol~L^{-1}~s^{-1}\\
+\text{rate}_2=\frac{1}{2}7.9\times10^{-7}mol~L^{-1}~s^{-1}(1-\alpha)=3.2\times10^{-7}mol~L^{-1}~s^{-1}
+\end{gather*}
+The rate of hydronium ion concentration dropping is
+\[
+\frac{d[H_3O^+]}{dt}=2~\text{rate}_1-2\text{rate}_2=-3.6\times10^{-7}mol~L^{-1}~s^{-1}
+\]
+The number of moles of consumed hydronium in $1$ min is
+\[
+\Delta n(H_3O^+)=-\frac{d[H_3O^+]}{dt}\times60s\times(1.00L+1.00L)=4.32\times10^{-5}mol
+\]
+The volume needed to add in $1$ min to keep the pH equal to $7.0$ is
+\[
+V=\frac{\Delta n(H_3O^+)}{c_0[H_3O^+]}=\frac{4.32\times10^{-5}mol}{0.100mol~L^{-1}}=4.32\times10^{-4}L=\uline{0.432mL}
+\]
+\end{sol}
+\end{document}

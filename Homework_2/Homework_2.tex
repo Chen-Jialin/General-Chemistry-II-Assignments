@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage{ulem}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 2}
+\begin{document}
+\begin{problem}{14.30}
+Suppose $93.0$ g of \ce{HI(g)} is placed in a glass vessel and heated to $1107$ K. At this temperature, equilibrium is quickly established between $HI(g)$ and its decomposition products, \ce{H2(g)} and \ce{I2(g)}:
+\begin{center}
+\ce{2HI(g) <=>H2(g) + I2(g)}
+\end{center}
+The equilibrium constant at $1107$ K is $0.0259$, and the total pressure at equilibrium is observed to equal $6.45$ atm. Calculate the equilibrium partial pressures of \ce{HI(g)}, \ce{H2(g)}, and \ce{I2(g)}.
+\end{problem}
+\begin{sol}
+Suppose the initial partial pressure of \ce{HI(g)} is $P_0$, and the change of the partial pressure of \ce{HI(g)} is $-2\Delta P$, then
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+& \ce{2HI(g)} & \ce{<=>} & \ce{H2(g)} & \ce{+} & \ce{I2(g)} \\
+Initial, atm & $P_0$ & & $0$ & & $0$ \\
+Change, atm & $-2\Delta P$ & & $\Delta P$ & & $\Delta P$ \\
+Equilibrium, atm & $P_0-2\Delta P$ & & $\Delta P$ & & $\Delta P$
+\end{tabular}
+\end{table}
+\\The total pressure of the system at equilibrium is
+\begin{align*}
+P_{total}=&(P_0-2\Delta P)+\Delta P+\Delta P=6.45atm\\
+\Longrightarrow P_0=&6.45atm
+\end{align*}
+The equilibrium constant is
+\begin{align*}
+K=&\frac{P_{H_2}P_{I_2}}{P_{HI}^2}=\frac{\Delta P\cdot\Delta P}{(P_0-2\Delta P)^2}=\frac{\Delta P^2}{(6.45atm-2\Delta P)^2}=0.0259\\
+\Longrightarrow\Delta P&=0.785atm\text{~~or~~}-0.785atm\text{~~(unphysical!)}
+\end{align*}
+Therefore, the equilibrium partial pressure of \ce{HI(g)} is
+\[
+P_{HI}=P_0-2\Delta P=6.45atm-2\times0.785atm=\uline{4.88atm}
+\]
+and the equilibrium partial pressure of both \ce{H2(g)} and \ce{I2(g)} are
+\[
+P_{H_2}=P_{I_2}=\Delta P=\uline{0.785atm}
+\]
+\end{sol}
+
+\begin{problem}{14.34}
+At $25 ^{\circ}$C, the equilibrium constant for the reaction
+\begin{center}
+\ce{2NO2(g) <=>2NO(g) + O2(g)}
+\end{center}
+is $5.9\times10^{-13}$. Suppose a container is filled with nitrogen dioxide at an initial partial pressure of $0.89$ atm. Calculate the partial pressures of all three gases after equilibrium is reached at this temperature.
+\end{problem}
+\begin{sol}
+Suppose the change of the partial pressure of \ce{NO2(g)} is $-2x$, then
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+& \ce{2NO2(g)} & \ce{<=>} & \ce{2NO(g)} & \ce{+} & \ce{O2(g)} \\
+Initial, atm & $0.89$ & & $0$ & & $0$ \\
+Change, atm & $-2x$ & & $2x$ & & $x$ \\
+Equilibrium, atm & $0.89-2x$ & & $2x$ & & $x$
+\end{tabular}
+\end{table}
+\\The equilibrium constant for the reaction is
+\[
+K=\frac{P_{NO}^2P_{O_2}}{P_{NO_2}^2}=\frac{(2x)^2x}{(0.89-2x)^2}=5.9\times10^{-13}
+\]
+Because the equilibrium constant $K$ is very small, the change of the partial pressure of \ce{NO2(g)}, $-2x$, is much smaller than the initial partial pressure of \ce{NO2(g)}, $0.89$ atm. In this way, we have the following approximation
+\begin{align*}
+K=&5.9\times10^{-13}\approx\frac{4x^3}{(0.89atm)^2}\\
+\Longrightarrow x=&4.9\times10^{-5}atm
+\end{align*}
+Therefore, the partial pressure of \ce{NO2(g)} is
+\[
+P_{NO_2}=0.89atm-2x=\uline{0.889902atm}
+\]
+the partial pressure of \ce{NO} is
+\[
+P_{NO}=2x=\uline{9.8\times10^{-5}atm}
+\]
+and the partial pressure of \ce{O_2} is
+\[
+P_{O_2}=x=\uline{4.9\times10^{-5}atm}
+\]
+\end{sol}
+
+\begin{problem}{14.46}
+Some \ce{SF2} (at a partial pressure of $2.3\times10^{-4}$ atm) is placed in a closed container at $298$ K with some \ce{F3SSF} (at a partial pressure of $0.0484$ atm). Enough argon is added to raise the total pressure to 1.000 atm.\\
+(a) Calculate the initial reaction quotient for the decomposition of \ce{F3SSF} to \ce{SF2}.\\
+(b) As the gas mixture reaches equilibrium, will there be net formation or dissociation of \ce{F3SSF}? (Use the data given in problem 22.)
+\end{problem}
+\begin{sol}
+\\(a) The reaction equation of decomposition of \ce{F3SSF} to \ce{SF2} is
+\begin{center}
+\ce{F3SSF(g) <=>2SF2(g)}
+\end{center}
+The initial reaction quotient for this reaction is
+\[
+Q=\frac{P_{SF_2}^2}{P_{F_2SSF}}=\frac{(2.3\times10^{-4})^2}{0.0484}=\uline{1.1\times10^{-6}}
+\]
+(b) From Problem 22, the equilibrium constant of this reaction is
+\[
+K=\frac{(P_{SF_2}^{eq})^2}{P_{F_2SSF}^{eq}}=\frac{(1.1\times10^{-4})^2}{0.0484}=2.5\times10^{-7}
+\]
+Because the initial reaction quotient for this reaction is greater than the equilibrium constant
+\[
+Q=1.1\times10^{-6}>K=2.5\times10^{-7}
+\]
+the reaction proceeds to the left and there will be net \uline{formation} of \ce{F3SSF} as the gas mixture reaches equilibrium.
+\end{sol}
+
+\begin{problem}{14.50}
+The equilibrium constant for the reaction
+\begin{center}
+\ce{H2S(g) + I2(g) <=>2HI(g) + S(s)}
+\end{center}
+at $110 ^{\circ}$C is equal to $0.0023$. Calculate the reaction quotient $Q$ for each of the following conditions and determine whether solid sulfur is consumed or produced as the reaction comes to equilibrium.\\
+(a) $P_{I_2}=0.461atm;~~P_{H_2S}=0.050atm;~~P_{HI}=0.0atm$\\
+(b) $P_{I_2}=0.461atm;~~P_{H_2S}=0.050atm;~~P_{HI}=9.0atm$
+\end{problem}
+\begin{sol}
+\\(a) The reaction quotient is
+\[
+Q=\frac{P_{HI}^2}{P_{H_2S}P_{I_2}}=\frac{0.0^2}{0.050\times0.461}=\uline{0.0}
+\]
+Because the reaction quotient is smaller than the equilibrium constant
+\[
+Q=0.0<K=0.0023
+\]
+the reaction proceeds to the right and solid sulfur is \uline{produced} as the reaction comes to equilibrium.\\
+(b) The reaction quotient is
+\[
+Q=\frac{P_{HI}^2}{P_{H_2S}P_{I_2}}=\frac{9.0^2}{0.050\times0.461}=\uline{3.5\times10^3}
+\]
+Because the reaction quotient is greater than the equilibrium constant
+\[
+Q=3.5\times10^3>K=0.0023
+\]
+the reaction proceeds to the left and solid sulfur is \uline{consumed} as the reaction comes to equilibrium.
+\end{sol}
+
+\begin{problem}{15.1}
+Which of the following can act as Brønsted–Lowry acids? Give the formula of the conjugate Brønsted–Lowry base for each of them.\\
+(a) \ce{Cl-}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(b) \ce{HSO4-}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(c) \ce{NH4+}\\
+(d) \ce{NH3}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(e) \ce{H2O}
+\end{problem}
+\begin{sol}
+(a) \ce{Cl-} \uline{can not} act as Brønsted–Lowry acids.\\
+(b) \ce{HSO4-} \uline{can} act as Brønsted–Lowry acids and its conjugate Brønsted–Lowry base is \underline{\ce{SO4-}}.\\
+(c) \ce{NH4+} \uline{can} act as Brønsted–Lowry acids and its conjugate Brønsted–Lowry base is \underline{\ce{NH3}}.\\
+(d) \ce{NH3} \uline{can} act as Brønsted–Lowry acids and its conjugate Brønsted–Lowry base is \underline{\ce{NH2-}}.\\
+(e) \ce{H2O} \uline{can} act as Brønsted–Lowry acids and its conjugate Brønsted–Lowry base is \underline{\ce{OH-}}.
+\end{sol}
+
+\begin{problem}{15.1}
+Researchers working with glasses often think of acid–base reactions in terms of oxide donors and oxide acceptors. The oxide ion is \ce{O^{2-}}.\\
+(a) In this system, is the base the oxide donor or the oxide
+acceptor?\\
+(b) Identify the acid and base in each of these reactions:\\
+\begin{center}
+\ce{2CaO + SiO2 ->Ca2SiO4}\\
+\ce{Ca2SiO4 + SiO2 ->2CaSiO3}\\
+\ce{Ca2SiO4 + CaO ->Ca3SiO5}
+\end{center}
+\end{problem}
+\begin{sol}
+\\(a) The base is oxide donor.\\
+(b) In reaction \ce{2CaO + SiO2 ->Ca2SiO4}, \underline{\ce{SiO2} is acid and \ce{CaO} is base}.\\
+In reaction \ce{Ca2SiO4 + SiO2 ->2CaSiO3}, \underline{\ce{SiO2} is acid and \ce{Ca2SiO4} is base}.\\
+In reaction \ce{Ca2SiO4 + CaO ->Ca3SiO5}, \underline{\ce{CaO} is acid and \ce{Ca2SiO4} is base}.
+\end{sol}
+
+\begin{problem}{15.17}
+The $pK_w$ of seawater at $25 ^{\circ}$C is $13.776$. This differs from the usual $pK_w$ of $14.00$ at this temperature because dissolved salts make seawater a nonideal solution. If the pH in seawater is $8.00$, what are the concentrations of \ce{H3O+} and \ce{OH-} in seawater at $25 ^{\circ}$C?
+\end{problem}
+\begin{sol}
+The concentration of \ce{H3O+} in seawater is
+\[
+[H_3O^+]=10^{-pH}mol\cdot L^{-1}=10^{-8.00}mol\cdot L^{-1}=\uline{1.0\times10^{-8}mol\cdot L^{-1}}
+\]
+The concentration of \ce{OH-} in seawater is
+\[
+[OH^-]=10^{-(pK_w-pH)}mol\cdot L^{-1}=10^{-(13.776-8.00)}mol\cdot L^{-1}=\uline{1.7\times10^{-6}mol\cdot L^{-1}}
+\]
+\end{sol}
+
+\begin{problem}{15.22}
+Niacin (\ce{C5H4NCOOH}), one of the B vitamins, is an acid.\\
+(a) Write an equation for its equilibrium reaction with water.\\
+(b) The $K_a$ for niacin is $1.5\times10^{-5}$. Calculate the K b for its conjugate base.\\
+(c) Is the conjugate base of niacin a stronger or a weaker base than pyridine, \ce{C5H5N}?
+\end{problem}
+\begin{sol}
+\\(a) \ce{C5H4NCOOH(aq) + H2O(l) <=> C5H4NCOO-(aq) + H3O+(aq)}\\
+(b) The $K_b$ for its conjugate base is
+\[
+K_b=\frac{K_w}{K_a}=\frac{1.0\times10^{-14}}{1.5\times10^{-5}}=\uline{6.7\times10^{-10}}
+\]
+(c) Because the $K_b$ of the conjugate base of niacin is smaller than that of pyridine
+\[
+(K_b)_{C_5H_4NCOO^-}=6.7\times10^{-10}<(K_b)_{C_5H_5N}=1.7\times10^{-9}
+\]
+\uline{the conjugate base of niacin is a weaker base than pyridine}.
+\end{sol}
+
+\begin{problem}{15.24}
+Use the data in Table 15.2 to determine the equilibrium constant for the reaction
+\begin{center}
+\ce{HPO4^{2-} + HCO3^- <=>PO4^{3-} + H2CO3}
+\end{center}
+Identify the stronger Brønsted–Lowry acid and the stronger Brønsted–Lowry base.
+\end{problem}
+\begin{sol}
+Because \ce{HPO4^{2-}} give out a proton and \ce{HCO3^-} accept it in the reaction, \ce{HPO4^{2-}} is Brønsted–Lowry acid and \ce{PO4^{3-}} is its conjugate base, and \ce{HCO3^-} is Brønsted–Lowry base and \ce{H2CO3} is its conjugate acid.\\
+Because the ionization of \ce{H2CO3} is greater than that of \ce{HPO4^{2-}}
+\[
+K_{H_2CO_3}=4.3\times10^{-7}>K_{HPO_4^{2-}}=2.2\times10^{-13} 
+\]
+\underline{\ce{H2CO3} is the stronger Brønsted–Lowry acid}.\\
+Because the strength of a base is inversely related to the strength of its conjugate acid, \underline{\ce{PO4^{3-}} is the stronger Brønsted–Lowry base}.
+\end{sol}
+\end{document}

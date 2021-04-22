@@ -1,0 +1,238 @@
+% !TEX program = pdflatex
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 9}
+\begin{document}
+\begin{problem}{17.31}
+An \ce{I2(s) | I-} ($1.00$ \textsc{m}) half-cell is connected to an \ce{H3O+ | H2} ($1$ atm) half-cell in which the concentration of the hydronium ion is unknown. The measured cell potential is $0.841$ V, and the \ce{I2 | I-} half-cell is the cathode. What is the pH in the \ce{H3O+ | H2} half-cell?
+\end{problem}
+\begin{sol}
+The standard reduction potential of the cathode and the anode are
+\begin{center}
+\ce{I2(s) + 2e- -> 2I-(aq)}~~$E_{cathode}^{\circ}=0.535V$\\
+\ce{2H3O+(aq) + 2e- -> 2H2O(l) + H2(g)}~~$E_{anode}^{\circ}=0V$
+\end{center}
+So the standard cell potential is
+\begin{center}
+\ce{H2(g) + 2H2O(aq) + I2(s) -> 2I-(aq) + 2H3O+(aq)}~~$E_{cell}^{\circ}=E_{cathode}^{\circ}-E_{anode}^{\circ}=0.535V-0V=0.535V$
+\end{center}
+According to the Nernst Equation,
+\begin{gather*}
+E_{cell}=E_{cell}^{\circ}-\frac{0.0592V}{n}\log_{10}\frac{[I^-]^2[H_3O^+]^2}{P_{H_2}}\\
+\Longrightarrow0.841V=0.535V-\frac{0.0592V}{2}\log_{10}\frac{1.00^2\times[H_3O^+]^2}{1}\\
+\Longrightarrow pH=-\log_{10}[H_3O^+]=\uline{5.17}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{17.37}
+The following standard reduction potentials have been determined for the aqueous chemistry of indium:
+\begin{center}
+\ce{In^{3+}(aq) + 2e- -> In+(aq)}~~$E^{\circ}=-0.40V$\\
+\ce{In+(aq) + e- -> In(s)}~~$E^{\circ}=-0.21V$
+\end{center}
+Calculate the equilibrium constant (K) for the disproportionation of \ce{In+(aq)} at $25^{\circ}$C.
+\begin{center}
+\ce{3In+(aq) <=> 2In(s) + In^{3+}(aq)}
+\end{center}
+\end{problem}
+\begin{sol}
+The standard reduction potential of the disproportionation reaction is
+\[
+E_3^{\circ}=E_2^{\circ}-E_1^{\circ}=-0.21V-(-0.40V)=0.19V
+\]
+The equilibrium constant for the disproportionation reaction is
+\begin{gather*}
+\log_{10}K=\frac{n}{0.0592V}E_3^{\circ}=\frac{2}{0.0592V}\times0.19V\\
+\Longrightarrow K=\uline{2.6\times10^6}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{17.40}
+In a galvanic cell, the cathode consists of a \ce{Ag+(1.00 \textsc{m})|Ag} half-cell. The anode is a platinum wire, with hydrogen bubbling over it at $1.00$-atm pressure, which is immersed in a buffer solution containing benzoic acid and sodium benzoate. The concentration of benzoic acid (\ce{C6H5COOH}) is $0.10$ \textsc{m}, and that of benzoate ion (\ce{C6H5COO-}) is $0.050$ \textsc{m}. The overall cell reaction is then
+\begin{center}
+\ce{Ag+(aq) + \frac{1}{2}H2(g) + H2O(l) -> Ag(s) + H3O+(aq)}
+\end{center}
+and the measured cell potential is $1.030$ V. Calculate the pH in the buffer solution and determine the $K _a$ of benzoic acid.
+\end{problem}
+\begin{sol}
+The standard reduction potential of the half-cell reaction are
+\begin{center}
+\ce{Ag+(aq) + e- -> Ag(s)}~~$E_{cathode}^{\circ}=0.7996V$\\
+\ce{H2(g) + 2e- -> 2H+(aq)}~~$E_{anode}^{\circ}=0V$
+\end{center}
+So the standard cell potential is
+\[
+E_{cell}^{\circ}=E_{cathode}^{\circ}-E_{anode}^{\circ}=0.7996V-0V=0.7996V
+\]
+According to the Nernst Equation,
+\begin{gather*}
+E_{cell}=E_{cell}^{\circ}-\frac{0.0592V}{n}\log_{10}\frac{[H_3O^+]}{[Ag^+]P_{H_2}}\\
+\Longrightarrow1.030V=0.7996V-\frac{0.0592V}{1}\frac{[H_3O^+]}{1.00\times1.00}\\
+\Longrightarrow pH=-\log_{10}[H_3O^+]=\uline{3.89}
+\end{gather*}
+So the concentration of \ce{H3O+} is
+\[
+[H3O+]=10^{-pH}=10^{-3.89}mol\cdot L^{-1}=1.28\times10^{-4}mol\cdot L^{-1}
+\]
+The ionization equation of benzoic is
+\begin{center}
+\ce{C6H5COOH(aq) + H2O(l) <=> C6H5COO-(aq) + H3O+(aq)}
+\end{center}
+So the $K_a$ of benzoic is
+\[
+K_a=\frac{[C_6H_5COO^-][H_3O^+]}{[C_6H_5COOH]}=\frac{0.050\times1.28\times10^{-4}}{0.10}=\uline{6.4\times10^{-5}}
+\]
+\end{sol}
+
+\begin{problem}{17.47}
+Would \ce{CdS} be a suitable semiconductor for direct photo-electrochemical water splitting? Why or why not? The conduction band lies at about $-1.25$ V vs NHE and the valence band lies at about $0.12$ V vs NHE.
+\end{problem}
+\begin{sol}
+\uline{No}.\\
+Because the standard reduction potential of \ce{H2|H+} and \ce{O2|H2O} are
+\begin{center}
+\ce{2H+(aq) + 2e- -> H2(g)}~~$E^{\circ}=0V$\\
+\ce{O2(g) + 4H3O+(l) + 4e- -> 6H2O(l)}~~$E^{\circ}=1.229V$
+\end{center}
+Reason: the conduction band of \ce{CdS} is below the $0$ V, so it is sufficient to reduce \ce{H+} to \ce{H_2}, but the valence band of \ce{CdS} is not over $1.229$ V, so it can not oxidize \ce{H2O} to \ce{O2}.
+\end{sol}
+
+\begin{problem}{17.54}
+(a) What quantity of charge (in coulombs) is a fully charged $1.34$-V zinc–mercuric oxide watch battery theoretically capable of furnishing if the mass of \ce{HgO} in the battery is $0.50$ g?\\
+(b) What is the theoretical maximum amount of work (in joules) that can be obtained from this battery?
+\end{problem}
+\begin{sol}
+\\(a) The number of moles of \ce{HgO} is
+\[
+n(HgO)=\frac{m(HgO)}{M(HgO)}=\frac{0.50g}{216.59g\cdot mol^{-1}}=2.3\times10^{-3}mol
+\]
+Each mole of \ce{HgO} corresponds to $2$ mol electrons transfered, so the quantity of charge that the zinc–mercuric oxide watch battery is theoretically capable of furnishing is
+\[
+Q=2n(HgO)F=2\times2.3\times10^{-3}mol\times96485C\cdot mol^{-1}=\uline{4.5\times10^2C}
+\]
+(b)  The theoretical maximum amount of work (in joules) that can be obtained from this battery is
+\[
+w=QV=4.5\times10^2C\times1.34V=\uline{6.0\times10^2J}
+\]
+\end{sol}
+
+\begin{problem}{17.58}
+Consider the fuel cell that accomplishes the overall reaction
+\begin{center}
+\ce{CO(g) + \frac{1}{2}O2(g) -> CO2(g)}
+\end{center}
+Calculate the maximum electrical work that could be obtained from the conversion of $1.00$ mol of \ce{CO(g)} to \ce{CO2(g)} in such a fuel cell operated with $100\%$ efficiency at $25^{\circ}$C and with the pressure of each gas equal to $1$ atm.
+\end{problem}
+\begin{sol}
+The standard free energy change of the reaction are
+\begin{align*}
+\Delta G_f^{\circ}=&\Delta G_f^{\circ}(C_2O)-\Delta G_f^{\circ}(CO)-\frac{1}{2}\Delta G_f^{\circ}(O_2)\\
+=&-394.36kJ\cdot mol^{-1}-(-137.15kJ\cdot mol^{-1})-\frac{1}{2}\times0kJ\cdot mol^{-1}\\
+=&-257.21kJ\cdot mol^{-1}
+\end{align*}
+So the maximum electrical work that could be obtained from the fuel cell at is
+\[
+w=-n\Delta G_f^{\circ}\eta=-1.00mol\times(-257.21kJ\cdot mol^{-1})\times100\%=\uline{257.21kJ}
+\]
+\end{sol}
+
+\begin{problem}{17.66}
+A current of 75,000 A is passed through an electrolysis cell containing molten \ce{MgCl2} for $7.0$ days. Calculate the maximum theoretical mass of magnesium that can be recovered.
+\end{problem}
+\begin{sol}
+The number of moles of electrons transfered in $7.0$ days is
+\[
+n=\frac{it}{F}=\frac{75000A\times7.0\times24\times60\times60s}{96485C\cdot mol^{-1}}=4.7\times10^5mol
+\]
+Each mole of magnesium corresponds to $2$ mol electrons transfered, so the maximum theoretical mass of magnesium that can be recovered is
+\[
+m(Mg)=M(Mg)\frac{n}{2}=24.3g\cdot mol^{-1}\times\frac{4.7\times10^5mol}{2}=5.7\times10^6g=\uline{5.7t}
+\]
+\end{sol}
+
+\begin{problem}{17.71}
+An electrolytic cell consists of a pair of inert metallic electrodes in a solution buffered to pH$=5.0$ and containing nickel sulfate (\ce{NiSO_4}) at a concentration of $1.00$ \textsc{m}. A current of $2.00$ A is passed through the cell for $10.0$ hours.\\
+(a) What product is formed at the cathode?\\
+(b) What is the mass of this product?\\
+(c) If the pH is changed to pH$=1.0$, what product will form at the cathode?
+\end{problem}
+\begin{sol}
+\\(a) The standard reduction potential of \ce{H+(aq)|H2(g)} and \ce{Ni^{2+}|Ni(s)} are
+\begin{center}
+\ce{2H3O+(aq) + 2e- -> 2H2O(l) + H2(g)}~~$E^{\circ}(H^+(aq)|H_2(g))=0V$\\
+\ce{Ni^{2+}(aq) + 2e- -> Ni(s)}~~$E^{\circ}(Ni^+|Ni)=-0.23V$
+\end{center}
+According to the Nernst Equation, the reduction potential of \ce{H+(aq)|H2(g)} and \ce{Ni^{2+}|Ni(s)} are
+\begin{align*}
+E(H^+(aq)|H_2(g))=&E^{\circ}(H^+(aq)|H_2(g))-\frac{0.0592V}{n}\log_{10}\frac{P_{H_2}}{[H_3O^+]^2}\\
+=&0V-\frac{0.0592V}{2}\log_{10}\frac{1}{(10^{-5.0})^2}\\
+=&-0.296V\\
+E(Ni^+|Ni)=&E^{\circ}(Ni^+|Ni)-\frac{0.0592V}{n}\log_{10}\frac{1}{[Ni^{2+}]}\\
+=&-0.23V-\frac{0.0592V}{2}\log_{10}\frac{1}{1.00}\\
+=&-0.23V
+\end{align*}
+Because $E(H^+(aq)|H_2(g))<E(Ni^+|Ni)$, the product formed at the cathode is \uline{\ce{Ni}}.\\
+(b) The number of moles of electrons transfered in $10.0$ hours is
+\[
+n=\frac{it}{F}=\frac{2.00A\times60\times60\times10.0s}{96485C\cdot mol^{-1}}=0.746mol
+\]
+Each mole of \ce{Ni} corresponds to $2$ mol electrons transfered, so the mass of \ce{Ni} produced is
+\[
+m(Ni)=M(Ni)\frac{n}{2}=58.69g\cdot mol^{-1}\times\frac{0.746mol}{2}=\uline{21.9g}
+\]
+(c) When pH$=1$, the reduction potential of \ce{H+(aq)|H2(g)} is
+\begin{align*}
+E(H^+(aq)|H_2(g))=&E^{\circ}(H^+(aq)|H_2(g))-\frac{0.0592V}{n}\log_{10}\frac{P_{H_2}}{[H_3O^+]^2}\\
+=&0V-\frac{0.0592V}{2}\log_{10}\frac{1}{(10^{-1.0})^2}\\
+=&-0.0592V
+\end{align*}
+Because $E(H^+(aq)|H_2(g))>E(Ni^+|Ni)$, the product formed at the cathode is \uline{\ce{H2}}.
+\end{sol}
+
+\begin{problem}{17.84}
+By considering these half-reactions and their standard reduction potentials,
+\begin{center}
+\ce{Pt^{2+} + 2e- -> Pt}~~$E^{\circ}=1.2V$\\
+\ce{NO3^- + 4H3O+ + 3e- -> NO + 6H2O}~~$E^{\circ}=0.96V$\\
+\ce{PtCl4^{2-} + 2e- -> Pt + 4Cl-}~~$E^{\circ}=0.73V$
+\end{center}
+account for the fact that platinum will dissolve in a mixture of hydrochloric acid and nitric acid (aqua regia) but will not dissolve in either acid alone.
+\end{problem}
+\begin{sol}
+The standard potential of the reaction in which platinum dissolves in hydrochloric acid and nitric acid respectively are
+\begin{center}
+\ce{3Pt + 2NO3^- + 8H3O+ -> 3Pt^{2+} + 2NO + 12H2O}~~$E^{\circ}=0.96V-1.2V=-0.24V$\\
+\ce{2Pt + 4Cl- -> Pt^{2+} + PtCl4^{2-}}~~$E^{\circ}=-1.2V-0.73V=-1.93V$
+\end{center}
+so their Gibbs free energy are both positive
+\begin{center}
+\ce{3Pt + 2NO3^- + 8H3O+ -> 3Pt^{2+} + 2NO + 12H2O}~~$\Delta G_f^{\circ}=-nFE^{\circ}=-6mol\times96485C\cdot mol\times(-0.24V)=1.4\times10^5J>0$\\
+\ce{2Pt + 4Cl- -> Pt^{2+} + PtCl4^{2-}}~~$\Delta G_f^{\circ}=-nFE^{\circ}=-2mol\times96485C\cdot mol\times(-1.93V)=3.7\times10^5J>0$
+\end{center}
+However, the standard potential of the reaction in which platinum dissolves in a mixture of hydrochloric acid and nitric acid is
+\begin{center}
+\ce{3Pt + 12Cl- + 2NO3- + 8H3O+ -> 3Pt + 2NO + 12H2O}~~$E^{\circ}=0.96V-0.73V=0.23V$
+\end{center}
+and its Gibbs free energy is negative
+\begin{center}
+\ce{3Pt + 12Cl- + 2NO3- + 8H3O+ -> 3PtCl4^{2-} + 2NO + 12H2O}~~$\Delta G_f^{\circ}=-nFE^{\circ}=-6mol\times96485C\cdot mol\times0.23V=-1.3\times10^5J<0$
+\end{center}
+Therefore, platinum will dissolve in a mixture of hydrochloric acid and nitric acid (aqua regia) but will not dissolve in either acid alone.
+\end{sol}
+\end{document}

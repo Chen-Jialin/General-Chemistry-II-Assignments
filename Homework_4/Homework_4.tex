@@ -1,0 +1,286 @@
+% !TEX program = pdflatex
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\usepackage{listings}
+\lstset{language=Matlab}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 4}
+\begin{document}
+\begin{problem}{16.10}
+Ammonium hexachloroplatinate(IV), \ce{(NH4)2(PtCl6}), is one of the few sparingly soluble ammonium salts. Its $K_{sp}$ at $20^{\circ}$C is $5.6\times10^{-6}$. Compute its solubility in grams per liter of solution.
+\end{problem}
+\begin{sol}
+The solubility equilibrium is
+\begin{center}
+\ce{(NH4)2(PtCl6)(s) <=>2NH4^+(aq) + PtCl6^{2-}(aq)}
+\end{center}
+and the expression for the solubility product is
+\[
+K_{sp}=[NH_4^+]^2[PtCl_6^{2-}]=5.6\times10^{-6}
+\]
+Suppose $s$ mol of \ce{(NH4)2(PtCl6}) is dissolved in $1$ L, the equilibrium concentration of \ce{NH4^+} and \ce{PtCl6^{2-}} will be $2s$ \textsc{m} and $s$ \textsc{m}, respectively. So we have
+\[
+K_{sp}=[NH_4^+]^2[PtCl_6^{2-}]=(2s)^2\cdot s=4s^3=5.6\times10^{-6}\Longrightarrow s=0.011
+\]
+Therefore, the solubility in grams per liter of \ce{(NH4)2(PtCl6)} solution is
+\[
+solubility (g\cdot L^{-1})=s\cdot M((NH_4)_2(PtCl_6))=0.011mol\cdot L^{-1}\times443.87g\cdot mol^{-1}=\uline{4.9g\cdot L^{-1}}
+\]
+\end{sol}
+
+\begin{problem}{16.15}
+At $100 ^{\circ}$C, water dissolves $1.8\times10^{-2}$ g of AgCl per liter. Compute the $K_{sp}$ of \ce{AgCl} at this temperature.
+\end{problem}
+\begin{sol}
+The solubility equilibrium is
+\begin{center}
+\ce{AgCl(s) <=>Ag+(aq) + Cl-(aq)}
+\end{center}
+The concentration of \ce{Ag+} and \ce{Cl-} is
+\[
+[Ag^+]=[Cl^-]=\frac{solubility (g\cdot L^{-1}) of AgCl}{M(AgCl)}=\frac{1.8\times10^{-2}g\cdot L^{-1}}{143.32g\cdot mol^{-1}}=1.26\times10^{-4}mol\cdot L^{-1}
+\]
+Therefore, the $K_{sp}$ of \ce{AgCl} is
+\[
+K_{sp}=[Ag^+][Cl^-]=1.26\times10^{-4}\times1.26\times10^{-4}mol=\uline{1.6\times10^{-8}}
+\]
+\end{sol}
+
+\begin{problem}{16.20}
+Suppose $100.0$ mL of a $0.0010$ \textsc{m} \ce{CaCl2} solution is added to $50.0$ mL of a $6.0\times10^{-5}$ \textsc{m} \ce{NaF} solution at $25^{\circ}$C. Determine whether \ce{CaF2}(s) ($K_{sp}=3.9\times10^{-11}$) tends to precipitate from this mixture.
+\end{problem}
+\begin{sol}
+Suppose the total volume of the mixed solution is the sum of volume of the \ce{CaCl2} solution and the \ce{NaF} solution, which is
+\[
+V=V_1+V_2=100.0mL+50.0mL=150.0mL=0.1500L
+\]
+The concentration of \ce{Ca^{2+}} and \ce{F-} in the solution after mix are
+\begin{align*}
+[Ca^{2+}]=&\frac{c_1(CaCl_2)V_1}{V}=\frac{0.0010mol\cdot L^{-1}\times0.1000L}{0.1500L}=6.67\times10^{-4}mol\cdot L^{-1}\\
+[F^-]=&\frac{c_2(NaF)V_2}{V}=\frac{6.0\times10^{-5}mol\cdot L^{-1}\times0.0500L}{0.1500L}=2.0\times10^{-5}mol\cdot L^{-1}
+\end{align*}
+The solubility equilibrium of \ce{CaF2} is
+\begin{center}
+\ce{CaF2(s) <=>Ca^{2+}(aq) + 2F-(aq)}
+\end{center}
+So the reaction quotient is
+\[
+Q_{sp}=[Ca^{2+}][F^-]^2=6.67\times10^{-4}\times(2.0\times10^{-5})^2=2.7\times10^{-13}
+\]
+Since $Q_{sp}=2.7\times10^{-13}<3.9\times10^{-11}=K_{sp}$, the \ce{CaF2}(s) \uline{does not tend to precipitate} from this mixture.
+\end{sol}
+
+\begin{problem}{16.27}
+The solubility product of nickel(II) hydroxide, \ce{Ni(OH)2}, at $25^{\circ}$C is $K_{sp}=1.6\times10^{-16}$.\\
+(a) Calculate the molar solubility of \ce{Ni(OH)2} in pure water at $25^{\circ}$.\\
+(b) Calculate the molar solubility of \ce{Ni(OH)2} in $0.100$ \textsc{m} \ce{NaOH}.
+\end{problem}
+\begin{sol}
+\\(a) The solubility equilibrium of \ce{Ni(OH)2} is
+\begin{center}
+\ce{Ni(OH)2(s) <=>Ni^{2+}(aq) + 2OH-(aq)}
+\end{center}
+and the expression for the solubility product is
+\[
+K_{sp}=[Ni^{2+}][OH^-]^2=1.6\times10^{-16}
+\]
+Suppose the molar solubility of \ce{Ni(OH)2} in pure water is $s_1$ \textsc{m}, then the concentration of \ce{Ni^{2+}} and \ce{OH-} are $s_1$ \textsc{m} and $2s_1$ \textsc{m}, respectively. So we have
+\[
+K_{sp}=[Ni^{2+}][OH^-]^2=s_1\cdot(2s_1)^2=4s_1^3=1.6\times10^{-16}\Longrightarrow s_1=3.4\times10^{-6}
+\]
+Therefore, the molar solubility of \ce{Ni(OH)2} in pure water at $25^{\circ}$C is \uline{$3.4\times10^{-6}$ \textsc{m}}.\\
+(b) The concentration of \ce{OH-} in $0.100$ \textsc{m} \ce{NaOH} is $0.100$ \textsc{m}. Suppose the molar solubility of \ce{Ni(OH)2} in $0.100$ \textsc{m} \ce{NaOH} is $s_2$ \textsc{m}, then the concentration of \ce{Ni^{2+}} is $s_2$ \textsc{m}. So we have
+\[
+K_{sp}=[Ni^{2+}][OH^-]^2=s_2\cdot(0.100)^2=1.6\times10^{-16}\Longrightarrow s_2=1.6\times10^{-14}
+\]
+Therefore, the molar solubility of \ce{Ni(OH)2} in $0.100$ \textsc{m} \ce{NaOH} at $25^{\circ}$C is \uline{$1.6\times10^{-14}$ \textsc{m}}.
+\end{sol}
+
+\begin{problem}{16.32}
+Compare the molar solubility of \ce{Mg(OH)2} in pure water with that in a solution buffered at pH $9.00$.
+\end{problem}
+\begin{sol}
+The solubility equilibrium of \ce{Mg(OH)2} is
+\begin{center}
+\ce{Mg(OH)2(s) <=>Mg^{2+}(aq) + 2OH-(aq)}
+\end{center}
+and the expression for the solubility product is
+\[
+K_{sp}=[Mg^{2+}][OH^-]^2=1.2\times10^{-11}
+\]
+In pure water, suppose the molar solubility of \ce{Mg(OH)2} is $s_1$ \textsc{m}, then the concentration of \ce{Mg^{2+}} and \ce{OH-} are $s_1$ \textsc{m} and $2s_1$ \textsc{m}, respectively. So we have
+\[
+K_{sp}=[Mg^{2+}][OH^-]^2=s_1\cdot(2s_1)^2=4s_1^3=1.2\times10^{-11}\Longrightarrow s_1=1.4\times10^{-4}
+\]
+In a solution buffered at pH $9.00$, the concentration of \ce{OH-} is
+\[
+[OH^-]=10^{-14.00+pH}mol\cdot L^{-1}=10^{-5}mol\cdot L^{-1}
+\]
+Suppose the molar solubility of \ce{Mg(OH)2} is $s_2$ \textsc{m}, then the concentration of \ce{Mg^{2+}} is $s_2$ \textsc{m}. So we have
+\begin{gather*}
+K_{sp}=[Mg^{2+}][OH^-]^2=s_2\cdot(10^{-5})^2=1.2\times10^{-11}\\
+\Longrightarrow s_2=0.12>s_1=1.4\times10^{-4}
+\end{gather*}
+Therefore, \uline{the molar solubility of \ce{Mg(OH)2} in pure water is less than in a solution buffered at pH $9.00$}.
+\end{sol}
+
+\begin{problem}{16.38}
+The organic compound 18­-crown­-6 (see preceding problem) also binds strongly with the alkali metal ions in methanol.
+\begin{center}
+\ce{K+ + 18-crown-6 <=> [complex]+}
+\end{center}
+In methanol solution the equilibrium constant is $1.41\times10^6$. A similar reaction with Cs 1 has an equilibrium constant of only $2.75\times10^{4}$. A solution is made (in methanol) containing $0.020mol\cdot L^{-1}$ each of \ce{K+} and \ce{Cs+}. It also contains $0.30mol\cdot L^{-1}$ of 18­-crown­-6. Compute the equilibrium concentrations of both the uncomplexed \ce{K+} and the uncomplexed \ce{Cs+}.
+\end{problem}
+\begin{sol}
+The solubility equilibrium of \ce{K+} with 18-crown-6 is
+\begin{center}
+\ce{Cs+(aq) + 18-crown-6(aq) <=> Cs-crown+(aq)}, $K_{sp}=2.75\times10^4$
+\end{center}
+Because $K_{sp}$ of both two solubility equilibrium is very large, the equilibrium concentration of 18-crown-6 is approximately
+\begin{align*}
+[18-crown-6(aq)]=&[18-crown-6(aq)]_0-[K^+]_0-[Cs^+]_0\\
+=&0.30mol\cdot L^{-1}-0.020mol\cdot L^{-1}-0.020mol\cdot L^{-1}=0.26mol\cdot L^{-1}
+\end{align*}
+Suppose the equilibrium concentration of \ce{K+} and \ce{Cs+} are $-x$ \textsc{m} and $y$ \textsc{m}, respectively, then
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+& \ce{K+(aq)} & + & \ce{18-crown-6(aq)} & \ce{<=>} & \ce{K-crown+(aq)}\\
+Equilibrium, \textsc{m} & $x$ & & $0.26$ & & $0.020-x$
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+& \ce{Cs+(aq)} & + & \ce{18-crown-6(aq)} & \ce{<=>} & \ce{Cs-crown+(aq)}\\
+Equilibrium, \textsc{m} & $y$ & & $0.26$ & & $0.020-y$
+\end{tabular}
+\end{table}
+So the expression for the solubility products of the two equilibrium is
+\begin{gather*}
+K_{sp1}=\frac{[K-crown^+]}{[K^+][18-crown-6]}=\frac{0.020-x}{0.26x}=1.41\times10^6\\
+K_{sp2}=\frac{[Sc-crown^+]}{[Cs^+][18-crown-6]}=\frac{0.020-y}{0.26y}=2.75\times10^{4}\\
+\Longrightarrow x=5.5\times10^{-8},~~y=2.8\times10^{-6}
+\end{gather*}
+Therefore, the equilibrium concentrations of the uncomplexed \ce{K+} and umcomplexed \ce{Cs+} are \uline{$5.5\times10^{-8}mol\cdot L^{-1}$} and \uline{$2.8\times10^{-6}mol\cdot L^{-1}$}, respectively.
+\end{sol}
+
+\begin{problem}{16.47}
+$K_{sp}$ for \ce{Pb(OH)2} is $4.2\times10^{-15}$, and $K_f$ for \ce{Pb(OH)3^-} is $4\times10^{14}$. Suppose a solution whose initial concentration of \ce{Pb^{2+}}(aq) is $1.00$ \textsc{m} is brought to pH $13.0$ by addition of solid \ce{NaOH}. Will solid \ce{Pb(OH)2} precipitate, or will the lead be dissolved as \ce{Pb(OH)3^-}(aq)? What will be \ce{Pb^{2+}} and \ce{[Pb(OH)3^-]} at equilibrium? Repeat the calculation for an initial \ce{[Pb^{2+}]} concentration of $0.050$ \textsc{m}. (Hint: One way to solve this problem is to assume that \ce{Pb(OH)2}(s) is present and calculate \ce{Pb^{2+}} and \ce{[Pb(OH)3^-]} that would be in equilibrium with the solid. If the sum of these is less than the original \ce{Pb^{2+}}, the remainder can be assumed to have precipitated. If not, there is a contradiction and we must assume that no \ce{Pb(OH)2}(s) is present. In this case we can calculate \ce{Pb^{2+}} and \ce{[Pb(OH)3^-]} directly from $K_f$.)
+\end{problem}
+\begin{sol}
+The equilibrium equation and the expression of equilibrium equation of \ce{Pb(OH)3} and \ce{Pb} are
+\begin{center}
+\ce{Pb(OH)2(s) <=>Pb^{2+}(aq) + 2OH-(aq)}
+\end{center}
+\[
+K_{sp}=[Pb^{2+}][OH^-]^2=4.2\times10^{-15}
+\]
+\begin{center}
+\ce{Pb^{2+}(aq) + 3OH-(aq) <=>Pb(OH)3^-(aq)}
+\end{center}
+\[
+K_f=\frac{[Pb(OH)_3^-]}{[Pb^{2+}][OH^-]^3}=4\times10^{14}
+\]
+In the solution with pH pf $13.0$, the concentration of \ce{OH-} is
+\[
+[OH^-]=10^{-14.0+pH}mol\cdot L^{-1}=10^{-14.0+13.0}mol\cdot L^{-1}=0.10mol\cdot L^{-1}
+\]
+\uline{When the initial concentration of $1.00$ \textsc{m}}: assume that \ce{Pb(OH)2}(s) is present, then we have
+\[
+K_{sp}=[Pb^{2+}][OH^-]^2=[Pb^{2+}]\times0.10^2=4.2\times10^{-15}\Longrightarrow \uline{[Pb^{2+}]=4.2\times10^{-13}}
+\]
+and
+\[
+K_f=\frac{[Pb(OH)_3^-]}{[Pb^{2+}][OH^-]^3}=\frac{[Pb(OH)_3^-]}{4.2\times10^{-13}\times0.10^3}=4\times10^{14}\Longrightarrow\uline{[Pb(OH)_3^-]=0.2mol\cdot L^{-1}}
+\]
+Since $[Pb^{2+}]+[Pb(OH)_3^-]=4.2\times10^{-13}mol\cdot L^{-1}+0.2mol\cdot L^{-1}<1.00mol\cdot L^{-1}=[Pb^{2+}]_0$, the assumption is correct. Therefore, \uline{solid  \ce{Pb(OH)2} precipitate and some lead will be dissolved as \ce{Pb(OH)3^-}}.\\
+\uline{When the initial concentration of $0.050$ \textsc{m}}: the former assumption is not correct any more, since $[Pb^{2+}]+[Pb(OH)_3^-]=4.2\times10^{-13}+0.2mol\cdot L^{-1}>0.050mol\cdot L^{-1}=[Pb^{2+}]_0$. Therefore, \uline{solid \ce{Pb(OH)2} will not precipitate, but the lead will be dissolved as \ce{Pb(OH)3^-}}. In this way, suppose the concentration of \ce{Pb^{2+}} and \ce{Pb(OH)3^-} will have following relationship
+\[
+[Pb^{2+}]+[Pb(OH)_3^-]=[Pb^{2+}]_0=0.050mol\cdot L^{-1}
+\]
+So we have
+\begin{gather*}
+K_f=\frac{[Pb(OH)_3^-]}{[Pb^{2+}][OH^-]^3}=\frac{(0.050-[Pb^{2+}])}{[Pb^{2+}]\times0.10^3}=4\times10^{14}\\
+\Longrightarrow\uline{[Pb^{2+}]=1\times10^{-13}mol\cdot L^{-1}},~~\uline{[Pb(OH)_3^-]=0.050mol\cdot L^{-1}}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{16.53}
+Calculate the [\ce{Zn^{2+}}] in a solution that is in equilibrium with \ce{ZnS}(s) and in which $[H_3O^+]=1.0\times10^{-5}$ \textsc{m} and $[H_2S]=0.10$ \textsc{m}.
+\end{problem}
+\begin{sol}
+The concentration of \ce{OH-} is
+\[
+[OH^-]=\frac{K_w}{[H_3O^+]}=\frac{10^{-14}}{1.0\times10^{-5}}mol\cdot L^{-1}=1.0\times10^{-9}mol\cdot L^{-1}
+\]
+The ionization equilibrium equation of \ce{H2S} is
+\begin{center}
+\ce{H2S(aq) + H2O(l) <=>H3O+(aq) + HS-(aq)}
+\end{center}
+and the expression of its ionization constant is
+\[
+K_a=\frac{[H_3O^+][HS^-]}{[H_2S]}=\frac{1.0\times10^{-5}\times[HS^-]}{0.10}=9.1\times10^{-8}\Longrightarrow[HS^-]=9.1\times10^{-4}mol\cdot L^{-1}
+\]
+The solubility equilibrium of \ce{ZnS} is
+\begin{center}
+\ce{ZnS(s) + H2O(l) <=>Zn^{2+}(aq) + HS-(aq) + OH-(aq)}
+\end{center}
+and the expression of its solubility product is
+\begin{gather*}
+K_{sp}=[Zn^{2+}][HS^-][OH^-]=[Zn^{2+}]\times9.1\times10^{-4}\times1.0\times10^{-9}=2\times10^{-25}\\
+\Longrightarrow[Zn^{2+}]=\uline{2\times10^{-13}mol\cdot L^{-1}}
+\end{gather*}
+\end{sol}
+
+\begin{problem}{16.56}
+What is the highest pH at which $0.050$ \textsc{m} \ce{Mn^{2+}} will remain entirely in a solution that is saturated with \ce{H2S} at a concentration of $[H_2S]=0.10$ \textsc{m}? At this pH, what would be the concentration of \ce{Cd^{2+}} in equilibrium with solid \ce{CdS} in this solution?
+\end{problem}
+\begin{sol}
+Suppose the concentration of \ce[H3O+] is $x$ \textsc{m}.Then the concentration of \ce{OH-} is
+\[
+[OH^-]=\frac{K_w}{[H_3O^+]}=\frac{10^{-14}}{x}mol\cdot L^{-1}
+\]
+The ionization equilibrium equation of \ce{H2S} is
+\begin{center}
+\ce{H2S(aq) + H2O(l) <=>H3O+(aq) + HS-(aq)}
+\end{center}
+and the expression of its ionization constant is
+\[
+K_a=\frac{[H_3O^+][HS^-]}{[H_2S]}=\frac{x[HS^-]}{0.10}=9.1\times10^{-8}\Longrightarrow[HS^-]=\frac{9.1\times10^{-9}}{x}mol\cdot L^{-1}
+\]
+The solubility equilibrium of \ce{MnS} is
+\begin{center}
+\ce{MnS(s) + H2O(l) <=>Mn^{2+}(aq) + HS-(aq) + OH-(aq)}
+\end{center}
+and the expression of its solubility product is
+\begin{gather*}
+K_{sp}=[Mn^{2+}][HS^-][OH^-]=0.050\times\frac{9.1\times10^{-9}}{x}\times\frac{10^{-14}}{x}=3\times10^{-14}\\
+\Longrightarrow\uline[H_3O^+]=xmol\cdot L^{-5}=1.2\times10^{-5}mol\cdot L^{-1}
+\end{gather*}
+Therefore, the highest pH at which $0.050$ \textsc{m} \ce{Mn^{2+}} will remain entirely in a solution that is saturated with \ce{H2S} at a concentration of $[H_2S]=0.10$ \textsc{m} is
+\[
+\uline{pH}=-\log_{10}[H_3O^+]=-\log_{10}(1.2\times10^{-5})=\uline{4.92}
+\]
+At this pH, for the solubility equilibrium of solid \ce{CdS}, we have
+\begin{gather*}
+K_{sp}=[Cd^{2+}][HS^-][OH^-]=[Cd^{2+}]\times\frac{9.1\times10^{-9}}{1.2\times10^{-5}}\times\frac{10^{-14}}{1.2\times10^{-5}}=7\times10^{-28}\\
+\Longrightarrow\uline{[Cd^{2+}]}=\uline{1.1\times10^{-15}mol\cdot L^{-1}}
+\end{gather*}
+\end{sol}
+\end{document}

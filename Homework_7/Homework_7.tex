@@ -1,0 +1,185 @@
+% !TEX program = pdflatex
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 7}
+\begin{document}
+\begin{problem}{13.1}
+For each of the following processes, identify the system and the surroundings. Identify those processes that are spontaneous. For each spontaneous process, identify the constraint that has been removed to enable the process to occur:\\
+(a) Ammonium nitrate dissolves in water.\\
+(b) Hydrogen and oxygen explode in a closed bomb.\\
+(c) A rubber band is rapidly extended by a hanging wight.\\
+(d) The gas in a chamber is slowly compressed by a weighted piston.\\
+(e) A glass shatters on the floor.
+\end{problem}
+\begin{sol}
+\\(a) Spontaneous.\\
+System: all the matter participating in the reaction \ce{NH4NO3(s) -> NH4^+(aq) + NO3^-(aq)}, including the solid ammonium nitrate, the water in which it dissolves and the ions produced during the dissolution process.\\
+Surrounding: anything in the universe other than the matter in the system, including the flask or beaker in which the system is held, the air above the system, and other neighboring materials.\\
+Constrain: the physical between the solid ammonium nitrate and the water.\\
+(b) Spontaneous.\\
+System: all the mater participating in the reaction \ce{2H2(g) + O2(g) -> 2H2O(g/l)}, including the hydrogen gas, oxygen gas, and the water produced during the explosion.\\
+Surrounding: anything in the universe other than the matter in the system, including the wall of the bomb and other surrounding materials.\\
+Constrain: the energy barrier of the reaction.\\
+(c) Spontaneous.
+System: the rubber band.\\
+Surrounding: anything in the universe other than the matter in the system, including the weight attached to the band, the hanger at which the band hangs, the air in contact with the band, and other surrounding materials.\\
+Constrain: the support beneath the weight.\\
+(d) Spontaneous.
+System: the gas contained in the chamber.\\
+Surrounding: anything in the universe other than the gas contained in the chamber, including the wall of the chamber, the piston, and other surrounding materials.\\
+Constrain: the force to fix the piston.\\
+(e) Spontaneous.\\
+System: the glass (and its fragments after its shattering).\\
+Surrounding: anything in the universe other than the glass and its fragment, including the floor in which the glass shattered, air in contact with the glass, and other surrounding materials.\\
+Constrain: the force holding the glass above the floor.
+\end{sol}
+
+\begin{problem}{13.9}
+Predict the sign of the system's entropy change in each of the following processes.\\
+(a) Sodium chloride melts.\\
+(b) A building is demolished.\\
+(c) A volume of air is divided into three separate volumes of nitrogen, oxygen, and argon, each at the same pressure and temperature as the original air.
+\end{problem}
+\begin{sol}
+\\(a) \uline{$\Delta S>0$}.\\
+(b) \uline{$\Delta S>0$}.\\
+(c) \uline{$\Delta S<0$}.
+\end{sol}
+
+\begin{problem}{13.15}
+If $4.00$ mol hydrogen ($c_P=28.8J\cdot K^{-1}\cdot mol^{-1}$) is expanded reversibly and isothermally at $400$ K from an initial volume of $12.0$ L to a final volume of $30.0$ L, calculate $\Delta U$, $q$, $w$, $\Delta H$, and $\Delta S$ for the gas.
+\end{problem}
+\begin{sol}
+Because it is a isothermal process,
+\begin{align*}
+\uline{\Delta U=}&\uline{\Delta H=0}\\
+\uline{w}=&-nRT\ln(V_2/V_1)\\
+=&-4.00mol\times8.31Pa m^3mol^{-1}K^{-1}\times400K\times\ln(30.0L/12.0L)\\
+=&1.22\times10^4J=\uline{-12.2kJ}\\
+\uline{q}=&U-w=0-(-12.2)kJ=\uline{12.2kJ}\\
+\uline{\Delta S}=&\frac{q}{T}=\frac{1.22\times10^4J}{400K}=\uline{30.5J\cdot K^{-1}}
+\end{align*}
+\end{sol}
+
+\begin{problem}{13.19}
+In Example 12.3, a process was considered in which $72.4$ g iron initially at $100.0^{\circ}$C was added to $100.0$ g water initially at $10.0^{\circ}$C, and an equilibrium temperature of $16.5^{\circ}$C was reached. Take $c_P$(\ce{Fe}) to be $25.1J\cdot K^{-1}mol^{-1}$ and $c_P$(\ce{H2O}) to be $75.3J\cdot K^{-1}\cdot mol^{-1}$, independent of temperature. Calculate $\Delta S$ for the iron, $\Delta S$ for the water, and $\Delta S_{tot}$ in this process.
+\end{problem}
+\begin{sol}
+The number of moles of iron and water are
+\begin{align*}
+n(Fe)=&\frac{m(Fe)}{M(Fe)}=\frac{72.4g}{55.85g\cdot mol^{-1}}=1.296mol\\
+n(H_2O)=&\frac{m(H_2O)}{M(H_2O)}=\frac{100.0g}{18.02g\cdot mol^{-1}}=5.549mol
+\end{align*}
+The entropy change of the iron, the water, and the whole system are
+\begin{align*}
+\uline{\Delta S(Fe)}=&n(Fe)c_P(Fe)\ln(T_f/T_h)\\
+=&1.30mol\times25.1J\cdot K^{-1}mol^{-1}\ln((16.5+273.2)K/(100.0+273.2)K)\\
+=&\uline{-8.24J\cdot K^{-1}}\\
+\uline{\Delta S(H_2O)}=&n(Fe)c_P(Fe)\ln(T_f/T_l)\\
+=&5.549mol\times75.3J\cdot K^{-1}\cdot mol^{-1}\times\ln((16.5+273.15)K/(10.0+273.15)K)\\
+=&\uline{9.48J\cdot K^{-1}}\\
+\uline{\Delta S_{tot}}=&\Delta S(Fe)+\Delta S(H_2O)=-8.24J\cdot K^{-1}+9.48J\cdot K^{-1}=1.24J\cdot K^{-1}
+\end{align*}
+\end{sol}
+
+\begin{problem}{13.21}
+(a) Use data from Appendix D to calculate the standard entropy change at $25^{\circ}$C for the reaction
+\begin{center}
+\ce{N2H4(l) + 3O2(g) -> 2NO2(g) + 2H2O(l)}
+\end{center}
+(b) Suppose the hydrazine (\ce{N2H4}) is in the gaseous, rather than liquid, state. Will the entropy change for its reaction with oxygen be higher or lower than that calculated in part (a)? (Hint: Entropies of reaction can be added when chemical equations are added, in the same way that Hess’s law allows enthalpies to be added.)
+\end{problem}
+\begin{sol}
+\\(a) The entropy change for the reaction is
+\begin{align*}
+\Delta S^{\circ}=&2S^{\circ}(NO_2(g))+2S^{\circ}(H_2O(l))-S^{\circ}(N_2H_4(l))-3S^{\circ}(O_2(g))\\
+=&2\times239.95J\cdot K^{-1}\cdot mol^{-1}+2\times69.91J\cdot K^{-1}\cdot mol^{-1}-121.21J\cdot K^{-1}\cdot mol^{-1}\\
+&-3\times205.03J\cdot K^{-1}\cdot mol^{-1}\\
+=&\uline{-116.58J\cdot K^{-1}\cdot mol^{-1}}
+\end{align*}
+(b) The entropy change for the hydrazine changing from gaseous to liquid state is negative
+\[
+\Delta S_1^{\circ}<0
+\]
+so
+\[
+\Delta S^{\circ}+\Delta S_1^{\circ}<\Delta S^{\circ}
+\]
+the entropy change for the reaction of liquid hydrazine with oxygen will be \uline{lower} than that of gaseous one.  
+\end{sol}
+
+\begin{problem}{13.34}
+The primary medium for free energy storage in living cells is adenosine triphosphate (ATP). Its formation from adenosine diphosphate (ADP) is not spontaneous:
+\begin{center}
+\ce{ADP^{3-}(aq) + HPO4^{2-}(aq) + H+(aq) -> ATP^{4-}(aq) + H2O(l)}~~$\Delta G=+34.5kJ$
+\end{center}
+Cells couple ATP production with the metabolism of glucose (a sugar):
+\begin{center}
+\ce{C6H12O6(aq) + 6O2(g) -> 6CO2(g) + 6H2O(l)}~~$\Delta G=-2872kJ$
+\end{center}
+The reaction of 1 molecule of glucose leads to the formation of 38 molecules of ATP from ADP. Show how the coupling makes this reaction spontaneous. What fraction of the free energy released in the oxidation of glucose is stored in the ATP?
+\end{problem}
+\begin{sol}
+The coupling makes the change in Gibbs free energy of the reaction negative
+\begin{center}
+\ce{C6H12O6(aq) + 6O2(g) + 38ADP^{3-}(aq) + 38HPO4^{2-}(aq) + 38H+(aq) -> 6CO2(g) + 12H2O(l) + 38ATP^{4-}(aq)}~~$\Delta G=-1561kJ$
+\end{center}
+In this way, the reaction become spontaneous.\\
+The fraction of the free energy released in the oxidation of glucose is stored in the ATP is
+\[
+\eta=\frac{38\times34.5kJ}{2872kJ}\times100\%=\uline{45.6\%}
+\]
+\end{sol}
+
+\begin{problem}{13.40}
+In each cycle of its operation, a thermal engine absorbs $1000$ J of heat from a large heat reservoir at 400 K and discharges heat to another large heat sink at $300$ K. Calculate:\\
+(a) The thermodynamic efficiency of the heat engine, operated reversibly\\
+(b) The quantity of heat discharged to the low-temperature sink each cycle\\
+(c) The maximum amount of work the engine can perform each cycle
+\end{problem}
+\begin{sol}
+\\(a) The thermodynamic efficiency of the heat engine, operated reversibly is
+\[
+\epsilon=(1-\frac{T_l}{T_h})\times100\%=(1-\frac{300K}{400K})\times100\%=\uline{25.0\%}
+\]
+(b) The quantity of heat discharged to the low-temperature sink each cycle is
+\[
+q_l=q_h(1-\epsilon)=-1000J\times(1-25.0\%)=\uline{-750J}
+\]
+(c) The maximum amount of work the engine can perform each cycle is
+\[
+w=-q_h(1-\epsilon)=-1000J\times25.0\%=\uline{-250J}
+\]
+\end{sol}
+
+\begin{problem}{13.58}
+The strongest known chemical bond is that in carbon monoxide, CO, with bond enthalpy of $1.05\times10^3kJ\cdot mol^{-1}$. Furthermore, the entropy increase in a gaseous dissociation of the kind \ce{AB <-> A + B} is about $110J\cdot mol^{-1}\cdot K^{-1}$. These factors establish a temperature above which there is essentially no chemistry of molecules. Show why this is so, and find the temperature.
+\end{problem}
+\begin{sol}
+The change of Gibbs free energy of the reaction \ce{AB <-> A + B} is
+\[
+\Delta G=\Delta H-T\Delta S=(1.05\times10^6-110T)J\cdot mol^{-1}
+\]
+When the temperature is above
+\[
+T_0=\uline{9545K}
+\]
+the change of Gibbs free energy of the reaction is negative $\Delta G<0$, which means the reaction is spontaneous and even the strongest chemical bond will be broke. Therefore, when the temperature is above $9545K$, there is essentially no chemistry of molecules.
+\end{sol}
+\end{document}

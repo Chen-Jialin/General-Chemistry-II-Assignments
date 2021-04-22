@@ -1,0 +1,118 @@
+% !TEX program = pdflatex
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 11}
+\begin{document}
+\begin{problem}{21.12}
+Compute the volume (in cubic angstroms) of the unit cell of potassium hexacyanoferrate(III) (\ce{K3Fe(CN)6}), a substance that crystallizes in the monoclinic system with $a=8.40$ \AA, $b=10.44$ \AA, and $c=7.04$ \AA and with $\beta=107.5^{\circ}$.
+\end{problem}
+\begin{sol}
+The volume of the unit cell of \ce{K3Fe(CN)6} is
+\[
+V=abc\sin\beta=0.840nm\times1.044nm\times0.704nm\times\sin107.5^{\circ}=0.589nm^3
+\]
+\end{sol}
+
+\begin{problem}{21.22}
+The structure of aluminum is fcc and its density is $\rho=2.70$ g cm$^{-3}$.\\
+(a) How many \ce{Al} atoms belong to a unit cell?\\
+(b) Calculate $a$, the lattice parameter, and d, the nearest neighbor distance.
+\end{problem}
+\begin{sol}
+\\(a) $8\times\frac{1}{8}+6\times\frac{1}{2}=4$ \ce{Al} atoms belongs to a unit cell.\\
+(b) The density of \ce{Al} is given by
+\begin{gather*}
+\rho=\frac{M(Al)}{\frac{N_a}{4}a^3}\\
+\Longrightarrow2.70\times10^3kg~m^{-3}=\frac{27.0\times10^{-3}kg~mol^{-1}}{\frac{6.02\times10^{23}mol^{-1}}{4}a^3}
+\end{gather*}
+Therefore, the lattice parameter is
+\[
+\Longrightarrow a=4.05\times10^{10}m=\uline{4.05\text{\AA}}
+\]
+The nearest neighbor distance is
+\[
+d=\frac{\sqrt{2}}{2}a=\uline{2.86\text{\AA}}
+\]
+\end{sol}
+
+\begin{problem}{21.28}
+Classify each of the following solids as molecular, ionic, metallic, or covalent.\\
+(a) \ce{Rb}~~~~~~~~(b) \ce{C5H12}\\
+(c) \ce{B} ~~~~~~~~(d) \ce{Na2HPO4}
+\end{problem}
+\begin{sol}
+\\(a) \ce{Rb} is \uline{metallic}.\\
+(b) \ce{C5H12} is \uline{molecular}.\\
+(c) \ce{B} is \uline{covalent}.\\
+(d) \ce{Na2HPO4} is \uline{ionic}.
+\end{sol}
+
+\begin{problem}{21.34}
+Repeat the determinations of the preceding problem for the \ce{NaCl} crystal, referring to Figure 21.16.
+\end{problem}
+\begin{sol}
+\\The number of nearest neighbors of a {Na+} ion in crystalline \ce{NaCl} is \uline{$6$}.\\
+The number of second nearest neighbors is \uline{$12$}.\\
+The number of third nearest neighbors is \uline{$8$}.\\
+The nearest neighbors of the \ce{Na+} are \uline{\ce{Cl-} ions}.\\
+The second nearest neighbors are \uline{\ce{Na+} ions}.
+\end{sol}
+
+\begin{problem}{21.40}
+Repeat the calculation of problem 39 for \ce{CsCl}, taking the Madelung constant from Table 21.5 and taking the radii of \ce{Cs+} and \ce{Cl2} to be $1.67$ \AA and $1.81$ \AA.
+\end{problem}
+\begin{sol}
+The lattice energy is
+\begin{align*}
+\text{Lattice Energy}=&(1-10\%)\frac{N_Ae^2M}{4\pi\epsilon_0R_0}\\
+=&(1-10\%)\frac{6.02\times10^{23}mol^{-1}\times(1.602\times10^{-19}C)^2\times1.7627}{4\times8.854\times10^{-12}C^2~J^{-1}~m^{-1}\times(1.67+1.81)\times10^{-10}m}\\
+=&633kJ~mol^{-1}
+\end{align*}
+Therefore, the energy needed to dissociate $1.00$ mol of crystalline \ce{CsCl} into its gaseous ions is \uline{$633kJ$}.
+\end{sol}
+
+\begin{problem}{21.45}
+The number of beams diffracted by a single crystal depends on the wavelength l of the X-rays used and on the volume associated with one lattice point in the crystal -- that is, on the volume $V_p$ of a primitive unit cell. An approximate formula is
+\[
+\text{number of diffracted beams}=\frac{4}{3}\pi(\frac{2}{\lambda})^3V_p
+\]
+(a) Compute the volume of the conventional unit cell of crystalline sodium chloride. This cell is cubic and has an edge length of $5.6402$ \AA.\\
+(b) The \ce{NaCl} unit cell contains four lattice points. Compute the volume of a primitive unit cell for \ce{NaCl}.\\
+(c) Use the formula given in this problem to estimate the number of diffracted rays that will be observed if \ce{NaCl} is irradiated with X-rays of wavelength $2.2896$ \AA.\\
+(d) Use the formula to estimate the number of diffracted rays that will be observed if NaCl is irradiated with X-rays having the shorter wavelength $0.7093$ \AA.
+\end{problem}
+\begin{sol}
+\\(a) The volume of the conventional unit cell of crystalline sodium chloride is
+\[
+V=a^3=(0.56402nm)^3=\uline{0.17943nm^3}
+\]
+(b) The volume of a primitive unit cell for \ce{NaCl} is
+\[
+V_p=\frac{V}{4}=\frac{0.17943nm^3}{4}=\uline{0.04486nm^3}
+\]
+(c) If the X-rays have wavelength of $2.2896$ \AA, the number of diffracted rays is
+\[
+\text{number of diffracted beams}=\frac{4}{3}\pi(\frac{2}{\lambda})^3V_p=\frac{4}{3}\pi\times(\frac{2}{0.22896nm})^3\times0.04486nm^3=\uline{125}
+\]
+(d) If the X-rays have wavelength of $0.07093nm$, the number of diffracted rays is
+\[
+\text{number of diffracted beams}=\frac{4}{3}\pi(\frac{2}{\lambda})^3V_p=\frac{4}{3}\pi\times(\frac{2}{0.07093nm})^3\times0.04486nm^3=\uline{4211}
+\]
+\end{sol}
+\end{document}

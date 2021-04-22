@@ -1,0 +1,241 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}}
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+\usepackage[UTF8]{ctex}
+\usepackage{ulem}
+\usepackage[version=4]{mhchem}
+\lhead{Name: 陈稼霖\\ StudentID: 45875852}
+\rhead{CHEM1111 \\ General Chemistry II \\ Spring 2019 \\ Homework 1}
+\begin{document}
+\begin{problem}{11.7}
+Water is slightly soluble in liquid nitrogen. At $-196 ^\circ$C (the boiling point of liquid nitrogen), the mole fraction of water in a saturated solution is $1.00\times10^{-5}$. Compute the mass of water that can dissolve in $1.00$ kg of boiling liquid nitrogen.
+\end{problem}
+\begin{sol}
+The number of moles of $1.00$ kg nitrogen is
+\[
+n_{N_2}=\frac{m_{N_2}}{1.00\times10^{-3}g\cdot kg^{-1}\times M_{N_2}}=\frac{1.00kg}{1.00\times10^{-3}g\cdot kg^{-1}\times28.0g\cdot{mol}^{-1}}=35.7mol
+\]
+The mass of water that can dissolve in $1.00$ kg of boiling liquid nitrogen is
+\begin{align*}
+m_{H_2O}=&\frac{1.00\times10^{-5}n_{N_2}}{1.00+1.00\times10^{-5}}\times M(H_2O)=\frac{1.00\times10^{-5}\times35.7mol}{1.00+1.00\times10^{-5}}\times18.0g\cdot mol^{-1}\\
+=&\uline{6.43\times10^{-3}g}
+\end{align*}
+\end{sol}
+
+\begin{problem}{11.10}
+A perchloric acid solution is $60.0\%$ \ce{HClO4} by mass. It is
+simultaneously $9.20$ \textsc{m} at $25 ^\circ$C.\\
+(a) Compute the density of this solution.\\
+(b) What volume of this solution should be used in mixing $1.00$ L of a $1.00$ \textsc{m} perchloric acid solution?
+\end{problem}
+\begin{sol}
+\\(a) Consider $1.00$ L of this solution. The mass of \ce{HClO4} in the solution is
+\[
+m_{HClO_4}=c_{HClO_4}V_{solution}M_{HClO_4}=9.20mol\cdot L^{-1}\times1.00L\times100.5g\cdot mol^{-1}=9.246\times10^{2}g
+\]
+The mass of the solution is
+\[
+m_{solution}=\frac{m_{HClO_4}}{60.0\%}=\frac{9.246\times10^{2}g}{60.0\%}=1.54\times10^{3}g=1.54kg
+\]
+The density of this solution is
+\[
+\rho_{solution}=\frac{m_{solution}}{V_{solution}}=\frac{1.54kg}{1.00L}=\uline{1.54kg\cdot L^{-1}}
+\]
+(b) The volume of this solution should be used in mixing $1.00$ L of a $1.00$ \textsc{m} perchloric acid solution is
+\[
+V_i=\frac{c_fV_f}{c_i}=\frac{1.00mol\cdot mol^{-1}\times1.00L}{9.20mol\cdot mol^{-1}\times}=0.109L=\uline{109mL}
+\]
+\end{sol}
+
+\begin{problem}{11.14}
+Rewrite the following balanced equations as net ionic equations.\\
+(a) \ce{Na2SO4(aq) + BaCl2(aq) ->BaSO4(s) + 2NaCl(aq)}\\
+(b) \ce{6NaOH(aq) + 3Cl2(g) ->NaClO3(aq) + 5NaCl(aq) + 3H2O(l)}\\
+(c) \ce{Hg2(NO3)2(aq) + 2KI(aq) ->Hg2I2(s) + 2KNO3(aq)}\\
+(d) \ce{3NaOCl(aq) + KI(aq) ->NaIO3(aq) + 2NaCl(aq) + KCl(aq)}
+\end{problem}
+\begin{sol}
+\\(a) \ce{SO4^{2-}(aq) + Ba^{2+}(aq) ->BaSO4(s)}\\
+(b) \ce{6OH^-(aq) + 3Cl2(g) ->ClO3^-(aq) + 5Cl^-(aq) + 3H2O(l)}\\
+(c) \ce{2Hg^{+}(aq) + 2I^-(aq) ->Hg2I2(s)}\\
+(d) \ce{3OCl^{-}(aq) + I^-(aq) ->IO3^-(aq) + 3Cl^-(aq)}
+\end{sol}
+
+\begin{problem}{11.24}
+Phosphorus pentachloride reacts violently with water to give a mixture of phosphoric acid and hydrochloric acid.\\
+(a) Write a balanced chemical equation for this reaction.\\
+(b) Determine the concentration (in moles per liter) of each of the acids that result from the complete reaction of $1.22$ L of phosphorus pentachloride (measured at $215 ^\circ$C and $0.962$ atm pressure) with enough water to give a solution volume of $697$ mL.
+\end{problem}
+\begin{sol}
+\\(a) \ce{PCl5 + 4H2O ->H3PO4 + 5HCl}\\
+(b) The number of moles of Phosphorus pentachloride is
+\[
+n_{PCl_5}=\frac{PV}{RT}=\frac{0.962atm\times1.22L}{0.0821L\cdot atm\cdot mol^{-1}K^{-1}\times488K}=0.0293mol
+\]
+The numbers of moles of phosphoric acid and hydrochloric acid are
+\[
+n_{H_3PO_4}=n_{PCl_5}=0.0293mol
+\]
+and
+\[
+n_{HCl}=5n_{PCl_5}=5\times0.0293mol=0.1465mol
+\]
+The concentration of phosphoric acid and hydrochloric acid are
+\[
+c_{H_3PO_4}=\frac{n_{H_3PO_4}}{V_{solution}}=\frac{0.0293mol}{0.697L}=\uline{0.0420mol\cdot L^{-1}}
+\]
+and
+\[
+c_{HCl}=\frac{n_{HCl}}{V_{solution}}=\frac{0.1465mol}{0.697L}=\uline{0.210mol\cdot L^{-1}}
+\]
+\end{sol}
+
+\begin{problem}{11.34}
+Complete and balance the following equations for reactions taking place in basic solution.\\
+(a) \ce{OCl^-(aq) + I^-(aq) ->IO3^-(aq) + Cl^-(aq)}\\
+(b) \ce{SO3^{2-}(aq) + Be(s) ->S2O3^{2-}(aq) + Be2O3^{2-}(aq)}\\
+(c) \ce{H2BO3^-(aq) + Al(s) ->BH4^-(aq) + H2AlO3^-(aq)}\\
+(d) \ce{O2(g) + Sb(s) ->H2O2(aq) + SbO2^-(aq)}\\
+(e) \ce{Sn(OH)6^{2-}(aq) + Si(s) ->HSnO2^-(aq) + SiO3^{2-}(aq)}
+\end{problem}
+\begin{sol}
+\\(a) \ce{3OCl^-(aq) + I^-(aq) ->IO3^-(aq) + 3Cl^-(aq)}\\
+(b) \ce{2SO3^{2-}(aq) + 2Be(s) ->S2O3^{2-}(aq) + Be2O3^{2-}(aq)}\\
+(c) \ce{3H2BO3^-(aq) + 8Al(s) + 8OH^-(aq) + 7H2O(l) ->3BH4^-(aq) + 8H2AlO3^-(aq)}\\
+(d) \ce{3O2(g) + 2Sb(s) + 2OH^-(aq) + 2H2O(l) ->3H2O2(aq) + 2SbO2^-(aq)}\\
+(e) \ce{2Sn(OH)6^{2-}(aq) + Si(s) ->2HSnO2^-(aq) + SiO3^{2-}(aq) + 5H2O(l)}
+\end{sol}
+
+\begin{problem}{11.64}
+At $300$ K, the vapor pressure of pure benzene (\ce{C6H6}) is $0.1355$ atm and the vapor pressure of pure n-hexane (\ce{C6H14}) is $0.2128$ atm. Mixing $50.0$ g of benzene with $50.0$ g of n-hexane gives a solution that is nearly ideal.\\
+(a) Calculate the mole fraction of benzene in the solution.\\
+(b) Calculate the total vapor pressure of the solution at $300$ K.\\
+(c) Calculate the mole fraction of benzene in the vapor in equilibrium with the solution.
+\end{problem}
+\begin{sol}
+\\(a) The number of moles of benzene and n-hexane is
+\[
+n_{C_6H_6}=\frac{m_{C_6H_6}}{M_{C_6H_6}}=\frac{50.0g}{78.1g\cdot mol^{-1}}=0.640mol
+\]
+and
+\[
+n_{C_6H_{14}}=\frac{m_{C_6H_{14}}}{M_{C_6H_{14}}}=\frac{50.0g}{86.2g\cdot mol^{-1}}=0.580mol
+\]
+The mole fraction of benzene in the solution is
+\[
+X_{C_6H_6}=\frac{n_{C_6H_6}}{n_{C_6H_6}+n_{C_6H_{14}}}=\frac{0.640mol}{0.640mol+0.580mol}=\uline{0.525}
+\]
+(b) The total vapor pressure of the solution at $300$ K is
+\begin{align*}
+P=&X_{C_6H_6}P_{C_6H_6}+X_{C_6H_{14}}P_{C_6H_{14}}\\
+=&0.525\times0.1355atm+(1-0.525)\times0.2128atm\\
+=&\uline{0.172atm}
+\end{align*}
+(c) The mole fraction of benzene in the vapor in equilibrium with the solution is
+\[
+X_{benzene in vapor}=\frac{X_{C_6H_6}P_{C_6H_6}}{P}=\frac{0.525\times0.1355atm}{0.172atm}=\uline{0.414}
+\]
+\end{sol}
+
+\begin{problem}{11.78}
+Ethylene glycol (\ce{CH2OHCH2OH}) is used in antifreeze because, when mixed with water, it lowers the freezing point below $0 ^\circ$C. What mass percentage of ethylene glycol in water must be used to reduce the freezing point of the mixture to $-5.0 ^\circ$C, assuming ideal solution behavior?
+\end{problem}
+\begin{sol}
+The freezing-point depression constant of water is $K_f=1.86K\cdot kg\cdot mol^{-1}$. Molality of ethylene glycol in water must be used to reduce the freezing point of the mixture to $-5.0 ^\circ$C is
+\[
+molality~of~Ethylene~glycol=\frac{\Delta T_f}{K_f}=-\frac{(273.0-268.0)K}{1.86K\cdot kg\cdot mol^{-1}}=2.69mol\cdot kg^{-1}
+\]
+The corresponding mass percentage of ethylene glycol in water is
+\footnotesize\begin{align*}
+mass~percentage~of~ethylene~glycol=&\frac{2.69mol\cdot kg^{-1}\times1.00kg\times0.0621kg\cdot mol^{-1}}{2.69mol\cdot kg^{-1}\times1.00kg\times0.0621kg\cdot mol^{-1}+1.00kg}\times100\%\\
+=&\uline{14.3\%}
+\end{align*}\normalsize
+\end{sol}
+
+\begin{problem}{14.11}
+Using the law of mass action, write the equilibrium expression for each of the following reactions.\\
+(a) \ce{Zn(s) + 2Ag^+(aq) <=>Zn^{2+}(aq) + 2Ag(s)}\\
+(b) \ce{VO4^{3-}(aq) + H2O(l) <=>VO3(OH)^{2-}(aq) + OH^-(aq)}\\
+(c) \ce{2As(OH)6^{3-}(aq) + 6CO2(g) <=>As2O3(s) + 6HCO3^-(aq) + 3H2O(l)}
+\end{problem}
+\begin{sol}
+\\(a) $K=\frac{[Zn^{2+}]}{[Ag^+]^2}$\\
+(b) $K=\frac{[VO_3(OH)^{2-}][OH^-]}{[VO_4^{3-}]}$\\
+(c) $K=\frac{[HCO_3^-]^6}{[As(OH)_6^{3-}]^2(P_{CO_2})^6}$
+\end{sol}
+
+\begin{problem}{14.27}
+The dehydrogenation of benzyl alcohol to make the flavoring agent benzaldehyde is an equilibrium process described by the equation
+\begin{center}
+\ce{C6H5CH2OH(g) <=> C6H5CHO(g) + H2(g)}
+\end{center}
+At $523$ K, the value of its equilibrium constant is $K=0.558$.\\
+(a) Suppose $1.20$ g of benzyl alcohol is placed in a $2.00$-L vessel and heated to $523$ K. What is the partial pressure of benzaldehyde when equilibrium is attained?\\
+(b) What fraction of benzyl alcohol is dissociated into products at equilibrium?
+\end{problem}
+\begin{sol}
+\\(a) The initial number of moles of \ce{C6H5CH2OH} is
+\[
+n_{C_6H_5CH_2OH}=\frac{m_{C_6H_5CH_2OH}}{M_{C_6H_5CH_2OH}}=\frac{1.20g}{108g\cdot mol^{-1}}=0.0111mol
+\]
+The initial partial pressure of \ce{C6H5CH2OH} is
+\begin{align*}
+P_{C_6H_5CH_2OH}=&\frac{n_{C_6H_5CH_2OH}RT}{V}=\frac{0.0111mol\times0.0821L\cdot atm\cdot mol^{-1}\cdot K^{-1}\times 523K}{2.00L}\\
+=&0.238atm
+\end{align*}
+Suppose the change of partial pressure of \ce{C6H5CH2OH} is $x$, then
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+& \ce{C6H5CH2OH(g)} & \ce{<=>} & \ce{C6H5CHO(g)} & \ce{+} & \ce{H2(g)} \\
+Initial, atm & $0.238$ & & $0$ & & $0$ \\
+Change, atm & $-x$ & & $x$ & & $x$ \\
+Equilibrium, atm & $0.238-x$ & & $x$ & & $x$
+\end{tabular}
+\end{table}
+\\The equilibrium constant of this process can be write as
+\[
+K=\frac{P_{C_6H_5CHO}P_{H_2}}{P_{C_6H_5CH_2OH}}=\frac{x^2}{0.238-x}=0.558
+\]
+We solve the equation and get the partial pressure of benzaldehyde when equilibrium is attained
+\[
+P_{C_6H_5CHO}=x=\uline{0.180atm}
+\]
+(b) The fraction of benzyl alcohol that is dissociated into products at equilibrium is
+\[
+fraction=\frac{0.180atm}{0.238atm}\times100\%=\uline{75.6\%}
+\]
+\end{sol}
+
+\begin{problem}{14.53}
+Explain the effect of each of the following stresses on the position of the following equilibrium:
+\begin{center}
+\ce{3NO(g) <=> N2O(g) + NO2(g)}
+\end{center}
+The reaction as written is exothermic.\\
+(a) \ce{N2O(g)} is added to the equilibrium mixture without change of volume or temperature.\\
+(b) The volume of the equilibrium mixture is reduced at constant temperature.\\
+(c) The equilibrium mixture is cooled.\\
+(d) Gaseous argon (which does not react) is added to the equilibrium mixture while both the total gas pressure and the temperature are kept constant.\\
+(e) Gaseous argon is added to the equilibrium mixture without changing the volume.
+\end{problem}
+\begin{sol}
+\\(a) The addition of \ce{N2O(g)} increases the concentration of the product, which forces the reaction to proceed in the direction to reduce the concentration of \ce{N2O}. Therefore, the reaction proceeds to the \uline{left}.\\
+(b) The reduction of volume increases the pressure of the system, which forces the reaction to proceed in the direction to decrease the pressure of the system. Therefore, the reaction proceeds to the \uline{right}.\\
+(c) The cooling of the system forces the reaction to proceed in the direction to increase the temperature of the system. Considering the reaction is exothermic, the reaction proceeds to the \uline{right}.\\
+(d) The argon does not react but the addition of gaseous argon enlarge the volume of the system. The reaction should proceed in the direction to keep the total gas pressure constant. Therefore, the reaction proceed to the \uline{left}.\\
+(e) As argon does not react and the addition of gaseous argon does not change temperature or the partial pressure of the reactant and the product, the stress has \uline{no effect} on the equilibrium.
+\end{sol}
+\end{document}
